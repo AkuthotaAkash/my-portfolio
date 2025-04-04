@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>My Portfolio</title>
+	<link rel="website icon" type="png"
+		href="https://yt3.googleusercontent.com/ytc/AIdro_kXPT_-pAjWizvPKhH_kr6xmEFvEUoYuT5PQxaQvdseF40=s160-c-k-c0x00ffffff-no-rj">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+		integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+	body {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		font-family: 'Poppins', sans-serif;
+		font-size: clamp(20px, 8px, 34px);
+		background-color: #000;
+	}
+
+	/* Header Navbar Styles */
+	.navbar {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		position: static;
+		top: 0;
+		width: 100%;
+		background-image: linear-gradient(90deg, #ff0000, #000000, #ff0000);
+		background-color: transparent;
+	}
+
+	.logo {
+		padding: 0 5rem;
+	}
+
+	.logo .logo-heading {
+		color: #fff;
+	}
+
+	.menu {
+		padding: 0 5rem;
+	}
+
+	.hamburger {
+		display: none;
+		color: #fff;
+		font-size: 25px;
+	}
+
+	.cross-icon {
+		display: none;
+	}
+
+	.menu .menu-list {
+		display: flex;
+		list-style: none;
+	}
+
+	.menu-list .menu-list-items {
+		padding: 0.5rem 1rem;
+	}
+
+	@media screen and (min-width: 856px) and (max-width: 1024px) {
+		.menu-list .menu-list-items {
+			padding: 0.5rem 0.3rem;
+		}
+	}
+
+	/* Main Hero Section Styles */
+	.hero {
+		background-image: url('https://img.freepik.com/free-photo/red-neon-lines-design-dark-black-background_23-2147881214.jpg?t=st=1743665438~exp=1743669038~hmac=dbe781fe515e32766101fc71ed71d52e5644bb06471b7c82a9481ebfac85c564&w=1380 ');
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		width: 100%;
+		height: 100vh;
+		display: flex;
+		align-items: center;
+		justify-content: start;
+		margin-top: 5%;
+	}
+
+	.hero .intro {
+		text-align: center;
+		margin: 0 5rem;
+	}
+
+	.hero .intro-buttons {
+		margin: 2rem 0;
+		display: flex;
+		align-items: center;
+		justify-content: space-evenly;
+	}
+
+	/* About section styles */
+	.about {
+		display: flex;
+		align-items: center;
+		background-image: linear-gradient(45deg, #000000, #ff0000);
+		justify-content: space-between;
+		width: 100%;
+	}
+
+	.about .about-text {
+		width: 450px;
+		color: #fff;
+		padding: 5rem 1rem 5rem 5rem;
+	}
+
+	.about .about-image img {
+		height: 200px;
+		width: 250px;
+		padding-right: 40px;
+		border-radius: 50%;
+	}
+
+	/* Portfolio section styles */
+	.portfolio {
+		margin: 4.8rem 0;
+		padding: 0 5rem;
+	}
+
+	.port-card {
+		padding: 0 !important;
+		background: none !important;
+		border: 2px solid #000;
+	}
+	.portfolio :hover{
+		transform: translateY(-5px);
+		box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+	}
+
+	.port-card .image {
+		width: 100%;
+	}
+
+	.port-card .image img {
+		height: 200px;
+		width: 100%;
+		border-top-right-radius: 20px;
+		border-top-left-radius: 20px;
+	}
+
+	/* Services section styles */
+	.services {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		margin: 4.8rem 0;
+		padding: 0 5rem;
+	}
+	.my-card:hover{
+		transform: translateY(-15px);
+		box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+	}
+
+	.my-row {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin: 2rem 0;
+	}
+
+	.my-row .my-col {
+		text-align: center;
+		align-items: stretch;
+		width: 30%;
+	}
+
+	.my-card {
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		border-radius: 20px;
+		background-image: linear-gradient(#ff0000, #000000, #ff0000);
+		min-height: 100px;
+		padding: 1.5rem;
+	}
+	
+
+	.icon {
+		height: 100px;
+		width: 100px;
+		border-radius: 50%;
+		background-color: #000000;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.icon svg {
+		font-size: 50px;
+		color: rgb(255, 60, 0);
+	}
+
+	.certificates {
+  padding: 50px 0;
+  text-align: center;
+
+}
+
+.certificate-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  grid-template-rows: repeat(2, auto); /* 2 rows */
+  gap: 2rem;
+  padding: 20px;
+  justify-content: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.certificate-card {
+	background-image: linear-gradient(#ff0000, #000000,#ff0000);
+  border-radius: 15px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certificate-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.certificate-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.certificate-card h3 {
+  font-size: 1.2rem;
+  color: #ff0000;
+  margin-bottom: 0.5rem;
+}
+
+.certificate-card p {
+  font-size: 1rem;
+  color: #ffffff;
+}
+
+
+
+	/* Contact section styles */
+	.contact-cards {
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	margin-top: 2rem;
+	gap: 2rem;
+}
+
+.contact-card {
+	background-image: linear-gradient(#ff0000, #000000);
+	color: #fff;
+	border-radius: 15px;
+	padding: 2rem;
+	width: 250px;
+	text-align: center;
+	box-shadow: 0 4px 15px rgba(255, 0, 0, 0.5);
+	transition: transform 0.3s ease;
+}
+
+.contact-card:hover {
+	transform: translateY(-10px);
+}
+
+.contact-card i {
+	font-size: 2rem;
+	margin-bottom: 1rem;
+	color: #fff;
+}
+
+
+	/* Footer Styles */
+	.footer {
+		background-color: #000000;
+		color: #fff;
+		padding: 2rem;
+	}
+
+	.footer-list-items {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 50px;
+		width: 50px;
+		margin: 1rem 1rem 0 1rem;
+		border-radius: 50%;
+		background-color: #ff0000;
+	}
+
+	.footer-links {
+		font-size: 24px;
+		color: #fff;
+		text-decoration: none;
+	}
+
+	.social-links {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.footer-menu {
+		padding: 0 5rem;
+	}
+
+	.footer-menu .footer-menu-list {
+		display: flex;
+		list-style: none;
+	}
+
+
+
+
+
+
+
+	/* utility classes */
+	.greet-heading {
+		font-size: 1.3rem;
+		font-weight: lighter;
+		margin: 0;
+		letter-spacing: 1px;
+		color: #ff0000;
+	}
+
+	.my-heading {
+		font-size: 2.5rem;
+		margin: 0;
+		color: #ff0000;
+	}
+
+	.my-heading textarea {
+		background-image: linear-gradient(#ff0000, #000000, #ff0000)
+	}
+
+	.sub-heading {
+		margin: 0;
+		font-size: 0.8rem;
+		color: #ff0000;
+		font-weight: lighter;
+	}
+
+	.links:hover {
+		border-bottom: 2px solid #fff;
+	}
+
+	.links {
+		border-bottom: 2px solid transparent;
+		transition: all 0.25s;
+		padding: 5px;
+		text-decoration: none;
+		color: #fff;
+	}
+
+	.btn {
+		padding: 10px 20px;
+		border-radius: 5px;
+		cursor: pointer;
+		letter-spacing: 1px;
+		border: none;
+	}
+
+	.common-btn {
+		background-color: #ff0000;
+		color: #fff;
+		border: 2px solid #ff0000;
+		transition: all 0.25s;
+	}
+
+	.common-btn:hover {
+		background-color: #fff;
+		color: #ff0000;
+		border: 2px solid #fa0000;
+		outline: none;
+	}
+
+	.ghost-btn {
+		background-color: #fff;
+		color: #35A99C;
+		border: 2px solid #35A99C;
+		outline: none;
+	}
+
+	.ghost-btn:hover {
+		background-color: #35A99C;
+		color: #fff;
+		transition: all 0.25s;
+		border: 2px solid #35A99C;
+	}
+
+	.heading-span {
+		font-weight: bolder;
+	}
+
+	.text-center {
+		text-align: center;
+	}
+
+	.small-para {
+		font-size: 14px;
+		color: #fff;
+	}
+
+	.white-text {
+		color: #fff;
+	}
+
+	.blue-text {
+		color: #2fff00;
+	}
+
+
+	/* responsive */
+
+	/* GENERAL STYLES */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+/* NAVBAR RESPONSIVENESS */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #222;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+}
+
+.navbar ul li {
+  margin: 0 10px;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+/* HAMBURGER MENU */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .navbar ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #222;
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar ul.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+/* CERTIFICATE SECTION */
+.certificate-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .certificate-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .certificate-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* CONTACT SECTION */
+.contact-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* BUTTONS */
+button {
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(150, 5, 5);
+}
+.intro-buttons{
+	background-color: red;
+	box-shadow: 0 0 5px red,
+	0 0 25px red;
+}
+.intro-buttons:hover{
+	box-shadow:0 0 5px red,
+	0 0 25px red , 0 0 50px red,
+	0 0 100px red ,0 0 200px red;
+}
+
+</style>
+
+<body>
+	<!-- Navbar header section -->
+	<header class="header">
+		<nav class="navbar">
+			<div class="logo">
+				<h2 class="logo-heading">A.Akash</h2>
+			</div>
+			<div class="hamburger" id="hamburger">
+				<i class="fas fa-bars hamburger-icon"></i>
+				<i class="fas fa-times cross-icon"></i>
+			</div>
+			<div class="menu">
+				<ul class="menu-list">
+					<li class="menu-list-items">
+						<a class="links" href="#home">
+							Home
+						</a>
+					</li>
+					<li class="menu-list-items">
+						<a class="links" href="#portfolio">
+							Technologies
+						</a>
+					</li>
+					<li class="menu-list-items">
+						<a class="links" href="#about">
+							About
+						</a>
+					</li>
+					<li class="menu-list-items">
+						<a class="links" href="#services">
+							Services
+						</a>
+					</li>
+					<li class="menu-list-items">
+						<a class="links" href="#certificates">
+							Certificates
+						</a>
+					</li>
+					<li class="menu-list-items">
+						<a class="links" href="#contact">
+							Contact Me
+						</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+
+	<!-- Main hero banner -->
+	<section id="home" class="hero">
+		<div class="intro">
+			<div class="headings">
+				<h3 class="greet-heading">Hello, I'm</h3>
+				<h1 class="my-heading">Akuthota Akash</h1>
+				<h4 class="sub-heading">
+					I am a Student.
+				</h4>
+			</div>
+			<div class="intro-buttons">
+				<button class="btn common-btn">Hire Me</button>
+
+			</div>
+		</div>
+	</section>
+	<!-- Portfolio Section -->
+	<section class="portfolio" id="portfolio">
+		<div class="portfolio-heading">
+			<h1 class="my-heading text-center">Technologies</h1>
+		</div>
+		<div class="portfolio-content">
+
+			<div class="my-row">
+				<div class="my-col">
+					<div class="my-card">
+						<div class="icon">
+							<i class="fas fab fa-html5"></i>
+						</div>
+						<h3 class="greet-heading blue-text">HTML</h3>
+					</div>
+				</div>
+				<div class="my-col">
+					<div class="my-card">
+						<div class="icon">
+							<i class="fas fab fab fa-css3"></i>
+						</div>
+						<h3 class="greet-heading blue-text">CSS</h3>
+					</div>
+				</div>
+				<div class="my-col">
+					<div class="my-card">
+						<div class="icon">
+							<i class="fas fab fab fab fa-js"></i>
+						</div>
+						<h3 class="greet-heading blue-text">JAVA SCRIPT</h3>
+					</div>
+				</div>
+			</div>
+			<div class="my-row">
+				<div class="my-col">
+					<div class="my-card">
+						<div class="icon">
+							<i class="fa fa-database"></i>
+						</div>
+						<h3 class="greet-heading blue-text">SQL</h3>
+					</div>
+				</div>
+				<div class="my-col">
+					<div class="my-card">
+						<div class="icon">
+							<i class="fas fab fab fa-python"></i>
+						</div>
+						<h3 class="greet-heading blue-text">PYTHON</h3>
+					</div>
+				</div>
+				<div class="my-col">
+					<div class="my-card">
+						<div class="icon">
+							<i class="fas fab fab fa-java"></i>
+						</div>
+						<h3 class="greet-heading blue-text">JAVA</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- About Section -->
+	<section id="about" class="about">
+		<div class="about-text">
+			<h1 class="my-heading">About Me</h1>
+			<p class="lead-para">
+				I am Akuthota Akash.I am studying Final year CSE in Mother Theresa Institute of Engineering And
+				Technology. I
+				am from Palamaner.
+			</p>
+		</div>
+		<div class="about-image">
+			<img src="https://yt3.googleusercontent.com/ytc/AIdro_kXPT_-pAjWizvPKhH_kr6xmEFvEUoYuT5PQxaQvdseF40=s160-c-k-c0x00ffffff-no-rj"
+				alt="About Image">
+		</div>
+	</section>
+
+	<!-- Services Section -->
+	<section class="services" id="services">
+		<div class="services-heading">
+			<h1 class="my-heading text-center">My Services</h1>
+		</div>
+		<div class="services-content">
+			<div class="my-row">
+				<div class="my-col">
+					<div class="my-card">
+						<div class="icon">
+							<i class="fas fa-paint-brush"></i>
+						</div>
+						<h3 class="greet-heading blue-text">Web Design</h3>
+						<p class="small-para">
+							Web Design focuses on designing website interfaces. It deals with the visual aspects rather than the coding. 
+						</p>
+						<p class="small-para">
+							A well-designed website enhances brand identity, improves user engagement, and builds trust. A poorly designed site, however, can drive visitors away and negatively impact brand perception.
+						</p>
+					</div>
+				</div>
+				<div class="my-col">
+					<div class="my-card">
+						<div class="icon">
+							<i class="fas fa-edit"></i>
+						</div>
+						<h3 class="greet-heading blue-text">Web Development</h3>
+						<p class="small-para">
+							Web development involves creating, building, and maintaining websites. It includes web design, web publishing, web programming, and database management. 
+						</p>
+						<p class="small-para">
+							A well-developed website ensures smooth functionality, security, and responsiveness, making it accessible across different devices and browsers.
+						</p>
+					</div>
+				</div>
+				<div class="my-col">
+					<div class="my-card">
+						<div class="icon">
+							<i class="fas fa-chart-line"></i>
+						</div>
+						<h3 class="greet-heading blue-text">SEO</h3>
+						<p class="small-para">
+							SEO (Search Engine Optimization) improves a website's visibility on search engines by optimizing its structure and content. 
+						</p>
+						<p class="small-para">
+							SEO focuses on enhancing website ranking in search results by improving relevance, authority, and technical aspects such as page speed and mobile-friendliness.
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="my-row">
+				<div class="my-col">
+					<div class="my-card">
+						<div class="icon">
+							<i class="fas fa-quote-left"></i>
+						</div>
+						<h3 class="greet-heading blue-text">Content Writing</h3>
+						<p class="small-para">
+							Content writing involves creating clear, engaging, and informative written material for blogs, websites, social media, and more.
+						</p>
+						<p class="small-para">
+							A skilled content writer crafts compelling content that enhances brand authority, engages audiences, and improves SEO performance.
+						</p>
+					</div>
+				</div>
+				<div class="my-col">
+					<div class="my-card">
+						<div class="icon">
+							<i class="fab fa-wordpress-simple"></i>
+						</div>
+						<h3 class="greet-heading blue-text">WordPress Development</h3>
+						<p class="small-para">
+							WordPress developers specialize in building and customizing websites using WordPress. They handle both front-end and back-end development.
+						</p>
+						<p class="small-para">
+							They work with themes, plugins, and languages like PHP, HTML, CSS, and JavaScript to enhance site functionality, security, and performance.
+						</p>
+					</div>
+				</div>
+				<div class="my-col">
+					<div class="my-card">
+						<div class="icon">
+							<i class="fas fa-photo-video"></i>
+						</div>
+						<h3 class="greet-heading blue-text">Photo Editing</h3>
+						<p class="small-para">
+							Photo editing enhances digital images by adjusting colors, brightness, contrast, and sharpnes.
+						</p>
+						<p class="small-para">
+							Professionals use tools like Adobe Photoshop, Lightroom, and Canva for editing, creating graphics, and enhancing photos for various digital platforms.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+
+	<!-- Certificates Section -->
+<!-- Certificates Section -->
+<section class="certificates" id="certificates">
+	<div class="services-heading">
+	  <h1 class="my-heading text-center">Certificates</h1>
+	</div>
+	<div class="certificate-cards">
+	  <div class="certificate-card">
+		<img src="cc.jpg" alt="Certificate 1">
+		<h3>NPTEL Certificate</h3>
+		<p>Issued by IIT Kharagpur</p>
+	  </div>
+	  <div class="certificate-card">
+		<img src="fd.jpg" alt="Certificate 2">
+		<h3>front-end Developer</h3>
+		<p>Issued by Study Comrade</p>
+	  </div>
+	  <div class="certificate-card">
+		<img src="fsd.jpg" alt="Certificate 3">
+		<h3>Full Stack development</h3>
+		<p>Issued by BlackBuck Engineers</p>
+	  </div>
+	  <div class="certificate-card">
+		<img src="genz.jpg" alt="Certificate 4">
+		<h3>Web Development</h3>
+		<p>Issued by Genz Educate Wings</p>
+	  </div>
+	  <div class="certificate-card">
+		<img src="nipam.jpg" alt="Certificate 5">
+		<h3>NIPAM</h3>
+		<p>Issued by Intellectual Property India</p>
+	  </div>
+	  <div class="certificate-card">
+		<img src="r programming.jpg" alt="Certificate 6">
+		<h3>R-Programming</h3>
+		<p>Issued by MTIEAT</p>
+	  </div>
+	</div>
+  </section>
+  
+  
+
+	<!-- Contact me section -->
+	<!-- Contact Section -->
+	<section class="contact" id="contact">
+		<div class="services-heading">
+			<h1 class="my-heading text-center">Contact Me</h1>
+		</div>
+		<div class="contact-cards">
+			<div class="contact-card">
+				<i class="fas fa-envelope"></i>
+				<h3>Email</h3>
+				<p>massakash51@gmail.com</p>
+			</div>
+			<div class="contact-card">
+				<i class="fas fa-phone"></i>
+				<h3>Phone</h3>
+				<p>+91 93986 13492</p>
+			</div>
+			<div class="contact-card">
+				<i class="fas fa-map-marker-alt"></i>
+				<h3>Location</h3>
+				<p>Palamaner, Andhra Pradesh, India</p>
+			</div>
+		</div>
+	</section>
+
+
+	<!-- Footer section -->
+	<footer class="footer">
+		<div class="footer-content text-center">
+
+			<div class="social-links">
+				<div class="footer-menu">
+					<ul class="footer-menu-list">
+
+						<li class="footer-list-items">
+							<a class="footer-links" href="mailto:massakash51@gmail.com">
+								<i class="fa fa-envelope"></i>
+							</a>
+						</li>
+						<li class="footer-list-items">
+							<a class="footer-links" href="https://github.com/AkuthotaAkash">
+								<i class="fab fab fa-github"></i>
+							</a>
+						</li>
+						<li class="footer-list-items">
+							<a class="footer-links" href="https://www.linkedin.com/in/a-akash-34b1212b0/">
+								<i class="fab fa-linkedin-in"></i>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"
+		integrity="sha512-uKQ39gEGiyUJl4AI6L+ekBdGKpGw4xJ55+xyJG7YFlJokPNYegn9KwQ3P8A7aFQAUtUsAQHep+d/lrGqrbPIDQ=="
+		crossorigin="anonymous" referrerpolicy="no-referrer">
+		</script>
+	<script src="script.js"></script>
+
+
+</html>
