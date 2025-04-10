@@ -22,6 +22,7 @@
 		font-family: 'Poppins', sans-serif;
 		font-size: clamp(20px, 8px, 34px);
 		background-color: #000;
+
 	}
 
 	/* Header Navbar Styles */
@@ -100,26 +101,53 @@
 
 	/* About section styles */
 	.about {
-		display: flex;
-		align-items: center;
-		background-image: linear-gradient(45deg, #000000, #ff0000);
-		justify-content: space-between;
-		width: 100%;
-	}
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  background-image: linear-gradient(90deg, #000000, #ff0000, #000000);
+  color: white;
+}
 
-	.about .about-text {
-		width: 450px;
-		color: #fff;
-		padding: 5rem 1rem 5rem 5rem;
-	}
+.about-image img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
 
-	.about .about-image img {
-		height: 200px;
-		width: 250px;
-		padding-right: 40px;
-		border-radius: 50%;
-	}
+.about-text {
+  max-width: 600px;
+  line-height: 1.6;
+  font-size: 1rem;
+  text-align: center;
+}
 
+.about-text h2 {
+  color: red;
+  margin-bottom: 0 auto 1rem;
+  text-align: center;
+}
+
+/* Responsive fix */
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-image img {
+    width: 180px;
+    height: 180px;
+    margin-bottom: 1rem;
+  }
+
+  .about-text {
+    padding: 0 1rem;
+  }
+}
 	/* Portfolio section styles */
 	.portfolio {
 		margin: 4.8rem 0;
@@ -131,7 +159,8 @@
 		background: none !important;
 		border: 2px solid #000;
 	}
-	.portfolio :hover{
+
+	.portfolio :hover {
 		transform: translateY(-5px);
 		box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 	}
@@ -156,7 +185,8 @@
 		margin: 4.8rem 0;
 		padding: 0 5rem;
 	}
-	.my-card:hover{
+
+	.my-card:hover {
 		transform: translateY(-15px);
 		box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 	}
@@ -181,11 +211,15 @@
 		align-items: center;
 		justify-content: space-between;
 		border-radius: 20px;
-		background-image: linear-gradient(#ff0000, #000000, #ff0000);
+		background-image: linear-gradient(#ff0000, #000000, #ff0000,#000000);
 		min-height: 100px;
 		padding: 1.5rem;
+		padding-left: 15px;
+		white-space: normal;
+		word-wrap: break-word;
+		
 	}
-	
+
 
 	.icon {
 		height: 100px;
@@ -201,87 +235,91 @@
 		font-size: 50px;
 		color: rgb(255, 60, 0);
 	}
-
+/* certificate */
 	.certificates {
-  padding: 50px 0;
-  text-align: center;
+		padding: 50px 0;
+		text-align: center;
 
-}
+	}
 
-.certificate-cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columns */
-  grid-template-rows: repeat(2, auto); /* 2 rows */
-  gap: 2rem;
-  padding: 20px;
-  justify-content: center;
-  max-width: 1200px;
-  margin: auto;
-}
+	.certificate-cards {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		/* 3 columns */
+		grid-template-rows: repeat(2, auto);
+		/* 2 rows */
+		gap: 2rem;
+		padding: 20px;
+		justify-content: center;
+		max-width: 1200px;
+		margin: auto;
+	}
 
-.certificate-card {
-	background-image: linear-gradient(#ff0000, #000000,#ff0000);
-  border-radius: 15px;
-  padding: 1.5rem;
-  text-align: center;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+	.certificate-card {
+		background-image: linear-gradient(#ff0000, #000000, #ff0000);
+		border-radius: 15px;
+		padding: 1.5rem;
+		text-align: center;
+		box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+		transition: transform 0.3s ease, box-shadow 0.3s ease;
+	}
 
-.certificate-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-}
+	.certificate-card:hover {
+		transform: translateY(-10px);
+		box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+	}
 
-.certificate-card img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  margin-bottom: 1rem;
-}
+	.certificate-card img {
+		width: 100%;
+		height: auto;
+		border-radius: 10px;
+		margin-bottom: 1rem;
 
-.certificate-card h3 {
-  font-size: 1.2rem;
-  color: #ff0000;
-  margin-bottom: 0.5rem;
-}
+	}
 
-.certificate-card p {
-  font-size: 1rem;
-  color: #ffffff;
-}
+
+	.certificate-card h3 {
+		font-size: 1.2rem;
+		color: #ff0000;
+		margin-bottom: 0.5rem;
+	}
+
+	.certificate-card p {
+		font-size: 1rem;
+		color: #ffffff;
+	}
 
 
 
 	/* Contact section styles */
 	.contact-cards {
-	display: flex;
-	justify-content: space-evenly;
-	flex-wrap: wrap;
-	margin-top: 2rem;
-	gap: 2rem;
-}
+		display: flex;
+		justify-content: space-evenly;
+		flex-wrap: wrap;
+		margin-top: 2rem;
+		gap: 2rem;
+	}
 
-.contact-card {
-	background-image: linear-gradient(#ff0000, #000000);
-	color: #fff;
-	border-radius: 15px;
-	padding: 2rem;
-	width: 250px;
-	text-align: center;
-	box-shadow: 0 4px 15px rgba(255, 0, 0, 0.5);
-	transition: transform 0.3s ease;
-}
+	.contact-card {
+		background-image: linear-gradient(#ff0000, #000000);
+		color: #fff;
+		border-radius: 15px;
+		padding: 2rem;
+		width: 250px;
+		text-align: center;
+		box-shadow: 0 4px 15px rgba(255, 0, 0, 0.5);
+		transition: transform 0.3s ease;
+	}
 
-.contact-card:hover {
-	transform: translateY(-10px);
-}
+	.contact-card:hover {
+		transform: translateY(-10px);
+	}
 
-.contact-card i {
-	font-size: 2rem;
-	margin-bottom: 1rem;
-	color: #fff;
-}
+	.contact-card i {
+		font-size: 2rem;
+		margin-bottom: 1rem;
+		color: #fff;
+	}
 
 
 	/* Footer Styles */
@@ -421,133 +459,159 @@
 	}
 
 	.blue-text {
-		color: #2fff00;
+		color: #ffffff;
 	}
 
 
 	/* responsive */
 
 	/* GENERAL STYLES */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  box-sizing: border-box;
-}
+	body {
+		margin: 0;
+		padding: 0;
+		font-family: Arial, sans-serif;
+		box-sizing: border-box;
+	}
 
-/* NAVBAR RESPONSIVENESS */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 20px;
-  background-color: #222;
-}
+	/* NAVBAR RESPONSIVENESS */
+	.navbar {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 15px 20px;
+		background-color: #222;
+	}
 
-.navbar ul {
-  display: flex;
-  list-style: none;
-}
+	.navbar ul {
+		display: flex;
+		list-style: none;
+	}
 
-.navbar ul li {
-  margin: 0 10px;
-}
+	.navbar ul li {
+		margin: 0 10px;
+	}
 
-.navbar ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 16px;
-}
+	.navbar ul li a {
+		color: white;
+		text-decoration: none;
+		font-size: 16px;
+	}
 
-/* HAMBURGER MENU */
-.menu-toggle {
-  display: none;
-  font-size: 24px;
-  color: white;
-  cursor: pointer;
-}
+	/* HAMBURGER MENU */
+	.menu-toggle {
+		display: none;
+		font-size: 24px;
+		color: white;
+		cursor: pointer;
+	}
 
-@media (max-width: 768px) {
-  .navbar ul {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    background-color: #222;
-    width: 100%;
-    text-align: center;
-  }
+	@media (max-width: 768px) {
+		.navbar ul {
+			display: none;
+			flex-direction: column;
+			position: absolute;
+			top: 60px;
+			right: 0;
+			background-color: #222;
+			width: 100%;
+			text-align: center;
+		}
 
-  .navbar ul.active {
-    display: flex;
-  }
+		.navbar ul.active {
+			display: flex;
+		}
 
-  .menu-toggle {
-    display: block;
-  }
-}
+		.menu-toggle {
+			display: block;
+		}
+	}
 
-/* CERTIFICATE SECTION */
-.certificate-cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  padding: 20px;
-}
+	/* CERTIFICATE SECTION */
+	.certificate-cards {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 20px;
+		padding: 20px;
+	}
 
-@media (max-width: 768px) {
-  .certificate-cards {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
+	@media (max-width: 768px) {
+		.certificate-cards {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
 
-@media (max-width: 480px) {
-  .certificate-cards {
-    grid-template-columns: 1fr;
-  }
-}
+	@media (max-width: 480px) {
+		.certificate-cards {
+			grid-template-columns: 1fr;
+		}
+	}
 
-/* CONTACT SECTION */
-.contact-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 30px;
-}
+	/* CONTACT SECTION */
+	.contact-container {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		padding: 30px;
+	}
 
-@media (max-width: 768px) {
-  .contact-container {
-    flex-direction: column;
-    text-align: center;
-  }
-}
+	@media (max-width: 768px) {
+		.contact-container {
+			flex-direction: column;
+			text-align: center;
+		}
+	}
 
-/* BUTTONS */
-button {
-  padding: 10px 15px;
-  font-size: 16px;
-  border: none;
-  background-color: red;
-  color: white;
-  cursor: pointer;
-}
+	/* BUTTONS */
+	/* Shared style to unify the look without renaming classes */
+	/* Common button styles */
+	/* Common button styles */
+	button,
+	.resume-button a {
+		display: inline-flex;
+		/* Use flex to center text */
+		justify-content: center;
+		align-items: center;
+		padding: 10px 22px;
+		font-size: 16px;
+		border: 2px solid red;
+		background-color: red;
+		color: white;
+		font-weight: bold;
+		text-decoration: none;
+		cursor: pointer;
+		box-shadow: 0 0 5px red, 0 0 25px red;
+		transition: all 0.3s ease;
+		border-radius: 6px;
+		width: 150px;
+		/* Set fixed width */
+		height: 45px;
+		/* Set fixed height */
+		box-sizing: border-box;
+	}
 
-button:hover {
-  background-color: rgb(150, 5, 5);
-}
-.intro-buttons{
-	background-color: red;
-	box-shadow: 0 0 5px red,
-	0 0 25px red;
-}
-.intro-buttons:hover{
-	box-shadow:0 0 5px red,
-	0 0 25px red , 0 0 50px red,
-	0 0 100px red ,0 0 200px red;
-}
+	/* Hover effects */
+	button:hover,
+	.resume-button a:hover {
+		color: red;
+		background-color: white;
+		box-shadow: 0 0 5px red,
+			0 0 25px red,
+			0 0 50px red,
+			0 0 100px red,
+			0 0 200px red;
+		transform: scale(1.05);
+	}
 
+	/* Flex layout for button alignment */
+	.button-container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		max-width: 400px;
+		margin: 20px 0;
+		gap: 20px;
+	}
 </style>
 
 <body>
@@ -608,12 +672,19 @@ button:hover {
 					I am a Student.
 				</h4>
 			</div>
-			<div class="intro-buttons">
-				<button class="btn common-btn">Hire Me</button>
 
+			<!-- Flex container for buttons -->
+			<div class="button-container">
+				<div class="intro-buttons">
+					<a href="#contact"> <button class="btn common-btn">Hire Me</button></a>
+				</div>
+				<div class="resume-button">
+					<a href="A.Akash_resume.pdf" download>Resume</a>
+				</div>
 			</div>
 		</div>
 	</section>
+
 	<!-- Portfolio Section -->
 	<section class="portfolio" id="portfolio">
 		<div class="portfolio-heading">
@@ -643,7 +714,7 @@ button:hover {
 						<div class="icon">
 							<i class="fas fab fab fab fa-js"></i>
 						</div>
-						<h3 class="greet-heading blue-text">JAVA SCRIPT</h3>
+						<h3 class="greet-heading blue-text">JS</h3>
 					</div>
 				</div>
 			</div>
@@ -693,7 +764,7 @@ button:hover {
 	</section>
 
 	<!-- Services Section -->
-	<section class="services" id="services">
+	<section class="portfolio" id="portfolio">
 		<div class="services-heading">
 			<h1 class="my-heading text-center">My Services</h1>
 		</div>
@@ -705,12 +776,7 @@ button:hover {
 							<i class="fas fa-paint-brush"></i>
 						</div>
 						<h3 class="greet-heading blue-text">Web Design</h3>
-						<p class="small-para">
-							Web Design focuses on designing website interfaces. It deals with the visual aspects rather than the coding. 
-						</p>
-						<p class="small-para">
-							A well-designed website enhances brand identity, improves user engagement, and builds trust. A poorly designed site, however, can drive visitors away and negatively impact brand perception.
-						</p>
+
 					</div>
 				</div>
 				<div class="my-col">
@@ -719,12 +785,7 @@ button:hover {
 							<i class="fas fa-edit"></i>
 						</div>
 						<h3 class="greet-heading blue-text">Web Development</h3>
-						<p class="small-para">
-							Web development involves creating, building, and maintaining websites. It includes web design, web publishing, web programming, and database management. 
-						</p>
-						<p class="small-para">
-							A well-developed website ensures smooth functionality, security, and responsiveness, making it accessible across different devices and browsers.
-						</p>
+
 					</div>
 				</div>
 				<div class="my-col">
@@ -733,12 +794,7 @@ button:hover {
 							<i class="fas fa-chart-line"></i>
 						</div>
 						<h3 class="greet-heading blue-text">SEO</h3>
-						<p class="small-para">
-							SEO (Search Engine Optimization) improves a website's visibility on search engines by optimizing its structure and content. 
-						</p>
-						<p class="small-para">
-							SEO focuses on enhancing website ranking in search results by improving relevance, authority, and technical aspects such as page speed and mobile-friendliness.
-						</p>
+
 					</div>
 				</div>
 			</div>
@@ -749,12 +805,7 @@ button:hover {
 							<i class="fas fa-quote-left"></i>
 						</div>
 						<h3 class="greet-heading blue-text">Content Writing</h3>
-						<p class="small-para">
-							Content writing involves creating clear, engaging, and informative written material for blogs, websites, social media, and more.
-						</p>
-						<p class="small-para">
-							A skilled content writer crafts compelling content that enhances brand authority, engages audiences, and improves SEO performance.
-						</p>
+
 					</div>
 				</div>
 				<div class="my-col">
@@ -763,12 +814,7 @@ button:hover {
 							<i class="fab fa-wordpress-simple"></i>
 						</div>
 						<h3 class="greet-heading blue-text">WordPress Development</h3>
-						<p class="small-para">
-							WordPress developers specialize in building and customizing websites using WordPress. They handle both front-end and back-end development.
-						</p>
-						<p class="small-para">
-							They work with themes, plugins, and languages like PHP, HTML, CSS, and JavaScript to enhance site functionality, security, and performance.
-						</p>
+
 					</div>
 				</div>
 				<div class="my-col">
@@ -777,60 +823,95 @@ button:hover {
 							<i class="fas fa-photo-video"></i>
 						</div>
 						<h3 class="greet-heading blue-text">Photo Editing</h3>
-						<p class="small-para">
-							Photo editing enhances digital images by adjusting colors, brightness, contrast, and sharpnes.
-						</p>
-						<p class="small-para">
-							Professionals use tools like Adobe Photoshop, Lightroom, and Canva for editing, creating graphics, and enhancing photos for various digital platforms.
-						</p>
+
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
-	
+
 
 	<!-- Certificates Section -->
-<!-- Certificates Section -->
-<section class="certificates" id="certificates">
-	<div class="services-heading">
-	  <h1 class="my-heading text-center">Certificates</h1>
-	</div>
-	<div class="certificate-cards">
-	  <div class="certificate-card">
-		<img src="cc.jpg" alt="Certificate 1">
-		<h3>NPTEL Certificate</h3>
-		<p>Issued by IIT Kharagpur</p>
-	  </div>
-	  <div class="certificate-card">
-		<img src="fd.jpg" alt="Certificate 2">
-		<h3>front-end Developer</h3>
-		<p>Issued by Study Comrade</p>
-	  </div>
-	  <div class="certificate-card">
-		<img src="fsd.jpg" alt="Certificate 3">
-		<h3>Full Stack development</h3>
-		<p>Issued by BlackBuck Engineers</p>
-	  </div>
-	  <div class="certificate-card">
-		<img src="genz.jpg" alt="Certificate 4">
-		<h3>Web Development</h3>
-		<p>Issued by Genz Educate Wings</p>
-	  </div>
-	  <div class="certificate-card">
-		<img src="nipam.jpg" alt="Certificate 5">
-		<h3>NIPAM</h3>
-		<p>Issued by Intellectual Property India</p>
-	  </div>
-	  <div class="certificate-card">
-		<img src="r programming.jpg" alt="Certificate 6">
-		<h3>R-Programming</h3>
-		<p>Issued by MTIEAT</p>
-	  </div>
-	</div>
-  </section>
-  
-  
+	<!-- Certificates Section -->
+	<section class="certificates" id="certificates">
+		<div class="services-heading">
+			<h1 class="my-heading text-center">Certificates</h1>
+		</div>
+		<div class="certificate-cards">
+			<div class="certificate-card">
+				<img src="cc.jpg" alt="Certificate 1">
+				<h3>NPTEL Certificate</h3>
+				<p>Issued by IIT Kharagpur</p>
+			</div>
+			<div class="certificate-card">
+				<img src="fd.jpg" alt="Certificate 2">
+				<h3>front-end Developer</h3>
+				<p>Issued by Study Comrade</p>
+			</div>
+			<div class="certificate-card">
+				<img src="fsd.jpg" alt="Certificate 3">
+				<h3>Full Stack development</h3>
+				<p>Issued by BlackBuck Engineers</p>
+			</div>
+			<div class="certificate-card">
+				<img src="genz.jpg" alt="Certificate 4">
+				<h3>Web Development</h3>
+				<p>Issued by Genz Educate Wings</p>
+			</div>
+			<div class="certificate-card">
+				<img src="nipam.jpg" alt="Certificate 5">
+				<h3>NIPAM</h3>
+				<p>Issued by Intellectual Property India</p>
+			</div>
+			<div class="certificate-card">
+				<img src="r programming.jpg" alt="Certificate 6">
+				<h3>R-Programming</h3>
+				<p>Issued by MTIEAT</p>
+			</div>
+		</div>
+	</section>
+
+<!-- Project Details -->
+
+	<section class="certificates" id="certificates">
+		<div class="services-heading">
+			<h1 class="my-heading text-center">Project</h1>
+		</div>
+		<div class="certificate-cards">
+			<div class="certificate-card">
+				
+				<h3>NPTEL Certificate</h3>
+				<p>Issued by IIT Kharagpur</p>
+			</div>
+			<div class="certificate-card">
+				
+				<h3>front-end Developer</h3>
+				<p>Issued by Study Comrade</p>
+			</div>
+			<div class="certificate-card">
+				
+				<h3>Full Stack development</h3>
+				<p>Issued by BlackBuck Engineers</p>
+			</div>
+			<div class="certificate-card">
+				
+				<h3>Web Development</h3>
+				<p>Issued by Genz Educate Wings</p>
+			</div>
+			<div class="certificate-card">
+				
+				<h3>NIPAM</h3>
+				<p>Issued by Intellectual Property India</p>
+			</div>
+			<div class="certificate-card">
+				
+				<h3>R-Programming</h3>
+				<p>Issued by MTIEAT</p>
+			</div>
+		</div>
+	</section>
+
+
 
 	<!-- Contact me section -->
 	<!-- Contact Section -->
