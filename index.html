@@ -280,7 +280,7 @@
 
 	.certificate-card h3 {
 		font-size: 1.2rem;
-		color: #ff0000;
+		color: #ffffff;
 		margin-bottom: 0.5rem;
 	}
 
@@ -796,14 +796,14 @@
 				<div class="my-col">
 					<div class="my-card">
 						<div class="icon">
-							<i class="fas fa-chart-line"></i>
+							<i class="fas fas fa-photo-video"></i>
 						</div>
-						<h3 class="greet-heading blue-text">SEO</h3>
+						<h3 class="greet-heading blue-text"> photo Editing</h3>
 
 					</div>
 				</div>
 			</div>
-			<div class="my-row">
+			<!-- <div class="my-row">
 				<div class="my-col">
 					<div class="my-card">
 						<div class="icon">
@@ -831,7 +831,7 @@
 
 					</div>
 				</div>
-			</div>
+			</div> -->
 		</div>
 	</section>
 
@@ -840,42 +840,177 @@
 	<!-- Certificates Section -->
 	<section class="certificates" id="certificates">
 		<div class="services-heading">
-			<h1 class="my-heading text-center">Certificates</h1>
+		<h1 class="my-heading text-center">Certificates</h1>
 		</div>
 		<div class="certificate-cards">
-			<div class="certificate-card">
-				<img src="cc.jpg" alt="Certificate 1">
-				<h3>NPTEL Certificate</h3>
-				<p>Issued by IIT Kharagpur</p>
-			</div>
-			<div class="certificate-card">
-				<img src="fd.jpg" alt="Certificate 2">
-				<h3>front-end Developer</h3>
-				<p>Issued by Study Comrade</p>
-			</div>
-			<div class="certificate-card">
-				<img src="fsd.jpg" alt="Certificate 3">
-				<h3>Full Stack development</h3>
-				<p>Issued by BlackBuck Engineers</p>
-			</div>
-			<div class="certificate-card">
-				<img src="genz.jpg" alt="Certificate 4">
-				<h3>Web Development</h3>
-				<p>Issued by Genz Educate Wings</p>
-			</div>
-			<div class="certificate-card">
-				<img src="nipam.jpg" alt="Certificate 5">
-				<h3>NIPAM</h3>
-				<p>Issued by Intellectual Property India</p>
-			</div>
-			<div class="certificate-card">
-				<img src="r programming.jpg" alt="Certificate 6">
-				<h3>R-Programming</h3>
-				<p>Issued by MTIEAT</p>
+		<div class="certificate-card">
+			<a href="#certModal1">
+			<img src="cc.jpg" alt="Certificate 1">
+			</a>
+			<h3>Click To Expand</h3>
+		</div>
+		<div class="certificate-card">
+			<a href="#certModal2">
+			<img src="fd.jpg" alt="Certificate 2">
+			</a>
+			<h3>Click To Expand</h3>
+		</div>
+		<div class="certificate-card">
+			<a href="#certModal3">
+			<img src="fsd.jpg" alt="Certificate 3">
+			</a>
+			<h3>Click To Expand</h3>
+		</div>
+		<div class="certificate-card">
+			<a href="#certModal4">
+			<img src="genz.jpg" alt="Certificate 4">
+			</a>
+			<h3>Click To Expand</h3>
+		</div>
+		<div class="certificate-card">
+			<a href="#certModal5">
+			<img src="nipam.jpg" alt="Certificate 5">
+			</a>
+			<h3>Click To Expand</h3>
+		</div>
+		<div class="certificate-card">
+			<a href="#certModal6">
+			<img src="r programming.jpg" alt="Certificate 6">
+			</a>
+			<h3>Click To Expand</h3>
+		</div>
+		</div>
+
+		<!-- Modals for zoom effect -->
+		<div id="certModal1" class="modal">
+		<a href="#" class="close">&times;</a>
+		<div class="modal-content">
+			<img src="cc.jpg" alt="Certificate Zoom">
+			<div class="details">
+			<h2>NPTEL Certificate</h2>
+			<p>Issued by IIT Kharagpur</p>
 			</div>
 		</div>
+		</div>
+		<div id="certModal2" class="modal">
+		<a href="#" class="close">&times;</a>
+		<div class="modal-content">
+			<img src="fd.jpg" alt="Certificate Zoom">
+			<div class="details">
+			<h2>Front-end Developer</h2>
+			<p>Issued by Study Comrade</p>
+			</div>
+		</div>
+		</div>
+		<div id="certModal3" class="modal">
+		<a href="#" class="close">&times;</a>
+		<div class="modal-content">
+			<img src="fsd.jpg" alt="Certificate Zoom">
+			<div class="details">
+			<h2>Full Stack Development</h2>
+			<p>Issued by BlackBuck Engineers</p>
+			</div>
+		</div>
+		</div>
+		<div id="certModal4" class="modal">
+		<a href="#" class="close">&times;</a>
+		<div class="modal-content">
+			<img src="genz.jpg" alt="Certificate Zoom">
+			<div class="details">
+			<h2>Web Development</h2>
+			<p>Issued by Genz Educate Wings</p>
+			</div>
+		</div>
+		</div>
+		<div id="certModal5" class="modal">
+		<a href="#" class="close">&times;</a>
+		<div class="modal-content">
+			<img src="nipam.jpg" alt="Certificate Zoom">
+			<div class="details">
+			<h2>NIPAM</h2>
+			<p>Issued by Intellectual Property India</p>
+			</div>
+		</div>
+		</div>
+		<div id="certModal6" class="modal">
+		<a href="#" class="close">&times;</a>
+		<div class="modal-content">
+			<img src="r programming.jpg" alt="Certificate Zoom">
+			<div class="details">
+			<h2>R-Programming</h2>
+			<p>Issued by MTIEAT</p>
+			</div>
+		</div>
+		</div>
 	</section>
+	
+	<style>
+	.modal {
+		display: none;
+		position: fixed;
+		z-index: 999;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		background: rgba(0, 0, 0, 0.9);
+		justify-content: center;
+		align-items: center;
+		padding: 20px;
+		/* overflow-y: auto; */
+		box-sizing: border-box;
+	}
+	
+	.modal:target {
+		display: flex;
+	}
+	
+	.modal-content {
+	background: black;
+	border-radius: 12px;
+	max-width: 90%;
+	width: 100%;
+	max-height: 90vh;
+	overflow: auto;
+	padding: 20px;
+	box-shadow: 0 0 40px red;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+		}
+	
+	
+		.modal-content img {
+	width: auto;
+	max-width: 100%;
+	height: auto;
+	max-height: 70vh;
+	border-radius: 12px;
+	margin: 0 auto;
+		}
 
+	.details {
+		padding-top: 15px;
+		text-align: center;
+	}
+	
+	.details h2,
+	.details p {
+		color: rgb(255, 255, 255);
+	}
+	
+	.close {
+		position: absolute;
+		top: 20px;
+		right: 30px;
+		font-size: 30px;
+		color: white;
+		text-decoration: none;
+		font-weight: bold;
+	}
+	
+	</style>
 <!-- Project Details -->
 
 	<section class="certificates" id="Project">
