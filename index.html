@@ -101,53 +101,54 @@
 
 	/* About section styles */
 	.about {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 2rem;
-  padding: 2rem;
-  background-image: linear-gradient(90deg, #000000, #ff0000, #000000);
-  color: white;
-}
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 2rem;
+		padding: 2rem;
+		background-image: linear-gradient(90deg, #000000, #ff0000, #000000);
+		color: white;
+	}
 
-.about-image img {
-  width: 250px;
-  height: 250px;
-  object-fit: cover;
-  border-radius: 50%;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-}
+	.about-image img {
+		width: 250px;
+		height: 250px;
+		object-fit: cover;
+		border-radius: 50%;
+		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+	}
 
-.about-text {
-  max-width: 600px;
-  line-height: 1.6;
-  font-size: 1rem;
-  text-align: center;
-}
+	.about-text {
+		max-width: 600px;
+		line-height: 1.6;
+		font-size: 1rem;
+		text-align: center;
+	}
 
-.about-text h2 {
-  color: red;
-  margin-bottom: 0 auto 1rem;
-  text-align: center;
-}
+	.about-text h2 {
+		color: red;
+		margin-bottom: 0 auto 1rem;
+		text-align: center;
+	}
 
-/* Responsive fix */
-@media (max-width: 768px) {
-  .about {
-    flex-direction: column;
-    text-align: center;
-  }
+	/* Responsive fix */
+	@media (max-width: 768px) {
+		.about {
+			flex-direction: column;
+			text-align: center;
+		}
 
-  .about-image img {
-    width: 180px;
-    height: 180px;
-    margin-bottom: 1rem;
-  }
+		.about-image img {
+			width: 180px;
+			height: 180px;
+			margin-bottom: 1rem;
+		}
 
-  .about-text {
-    padding: 0 1rem;
-  }
-}
+		.about-text {
+			padding: 0 1rem;
+		}
+	}
+
 	/* Portfolio section styles */
 	.portfolio {
 		margin: 4.8rem 0;
@@ -211,13 +212,13 @@
 		align-items: center;
 		justify-content: space-between;
 		border-radius: 20px;
-		background-image: linear-gradient(#ff0000, #000000, #ff0000,#000000);
+		background-image: linear-gradient(#ff0000, #000000, #ff0000, #000000);
 		min-height: 100px;
 		padding: 1.5rem;
 		padding-left: 15px;
 		white-space: normal;
 		word-wrap: break-word;
-		
+
 	}
 
 
@@ -235,7 +236,8 @@
 		font-size: 50px;
 		color: rgb(255, 60, 0);
 	}
-/* certificate */
+
+	/* certificate */
 	.certificates {
 		padding: 50px 0;
 		text-align: center;
@@ -652,7 +654,7 @@
 							Certificates
 						</a>
 					</li>
-                    <li class="menu-list-items">
+					<li class="menu-list-items">
 						<a class="links" href="#Project">
 							My Projects
 						</a>
@@ -689,6 +691,7 @@
 			</div>
 		</div>
 	</section>
+
 
 	<!-- Portfolio Section -->
 	<section class="portfolio" id="portfolio">
@@ -757,19 +760,39 @@
 		<div class="about-text">
 			<h1 class="my-heading">About Me</h1>
 			<p class="lead-para">
-				I am Akuthota Akash.I am studying Final year CSE in Mother Theresa Institute of Engineering And
-				Technology. I
-				am from Palamaner.
+				I am Akuthota Akash.I completed My B.Tech in CSE Department in Mother Theresa Institute of Engineering
+				And
+				Technology Palamaner.
 			</p>
+			<a href="#mydetails" style="text-decoration: none; color: aqua; font-size: 20px; 
+				text-shadow: 0 0 5px aqua, 0 0 10px aqua, 0 0 15px #35A99C;">Click To Expand</a>
 		</div>
 		<div class="about-image">
-			<img src="https://yt3.googleusercontent.com/ytc/AIdro_kXPT_-pAjWizvPKhH_kr6xmEFvEUoYuT5PQxaQvdseF40=s160-c-k-c0x00ffffff-no-rj"
-				alt="About Image">
+			<img src="./A.Akash.jpg" alt="About Image">
 		</div>
 	</section>
+	<div id="mydetails" class="modal">
+		<a href="#" class="close">&times;</a>
+		<div class="modal-content">
+			<img src="A.Akash.jpg" alt="Certificate Zoom">
+			<div class="details">
+				<h2 style="color: red;">About Me</h2>
+				<p>Akuthota Akash</p>
+				<p>As a B.Tech (Computer Science and Engineering) student with
+					a passion for software engineering, I have developed a strong
+					foundation in programming language such as Python and Java.
+					I am proficient in web development with skills in HTML, CSS,
+					JavaScript. Additionally, I have hands-on experience with SQL
+					databases. I am eager to apply my knowledge and skills to real
+					world projects, and I am committed to continuously improving
+					and expanding my expertise in software development.
+				</p>
+			</div>
+		</div>
+	</div>
 
 	<!-- Services Section -->
-	<section class="portfolio" id="portfolio">
+	<section class="portfolio" id="services">
 		<div class="services-heading">
 			<h1 class="my-heading text-center">My Services</h1>
 		</div>
@@ -840,178 +863,226 @@
 	<!-- Certificates Section -->
 	<section class="certificates" id="certificates">
 		<div class="services-heading">
-		<h1 class="my-heading text-center">Certificates</h1>
+			<h1 class="my-heading text-center">Certificates</h1>
 		</div>
 		<div class="certificate-cards">
-		<div class="certificate-card">
-			<a href="#certModal1">
-			<img src="cc.jpg" alt="Certificate 1">
-			</a>
-			<h3>Click To Expand</h3>
-		</div>
-		<div class="certificate-card">
-			<a href="#certModal2">
-			<img src="fd.jpg" alt="Certificate 2">
-			</a>
-			<h3>Click To Expand</h3>
-		</div>
-		<div class="certificate-card">
-			<a href="#certModal3">
-			<img src="fsd.jpg" alt="Certificate 3">
-			</a>
-			<h3>Click To Expand</h3>
-		</div>
-		<div class="certificate-card">
-			<a href="#certModal4">
-			<img src="genz.jpg" alt="Certificate 4">
-			</a>
-			<h3>Click To Expand</h3>
-		</div>
-		<div class="certificate-card">
-			<a href="#certModal5">
-			<img src="nipam.jpg" alt="Certificate 5">
-			</a>
-			<h3>Click To Expand</h3>
-		</div>
-		<div class="certificate-card">
-			<a href="#certModal6">
-			<img src="r programming.jpg" alt="Certificate 6">
-			</a>
-			<h3>Click To Expand</h3>
-		</div>
+			<div class="certificate-card">
+				<a href="#certModal1" ; style="text-decoration: none;">
+					<img src="cc.jpg" alt="Certificate 1">
+					<h3>Click To Expand</h3>
+				</a>
+			</div>
+			<div class="certificate-card">
+				<a href="#certModal2" ; style="text-decoration: none;">
+					<img src="fd.jpg" alt="Certificate 2">
+					<h3>Click To Expand</h3>
+				</a>
+
+			</div>
+			<div class="certificate-card">
+				<a href="#certModal3" ; style="text-decoration: none;">
+					<img src="fsd.jpg" alt="Certificate 3">
+					<h3>Click To Expand</h3>
+				</a>
+
+			</div>
+			<div class="certificate-card">
+				<a href="#certModal4" ; style="text-decoration: none;">
+					<img src="genz.jpg" alt="Certificate 4">
+					<h3>Click To Expand</h3>
+				</a>
+
+			</div>
+			<div class="certificate-card">
+				<a href="#certModal5" ; style="text-decoration: none;">
+					<img src="nipam.jpg" alt="Certificate 5">
+					<h3>Click To Expand</h3>
+				</a>
+
+			</div>
+			<div class="certificate-card">
+				<a href="#certModal6" ; style="text-decoration: none;">
+					<img src="r programming.jpg" alt="Certificate 6">
+					<h3>Click To Expand</h3>
+				</a>
+			</div>
 		</div>
 
 		<!-- Modals for zoom effect -->
 		<div id="certModal1" class="modal">
-		<a href="#" class="close">&times;</a>
-		<div class="modal-content">
-			<img src="cc.jpg" alt="Certificate Zoom">
-			<div class="details">
-			<h2>NPTEL Certificate</h2>
-			<p>Issued by IIT Kharagpur</p>
+			<a href="#" class="close">&times;</a>
+			<div class="modal-content">
+				<img src="cc.jpg" alt="Certificate Zoom">
+				<div class="details">
+					<h2>NPTEL Certificate</h2>
+					<p>Issued by IIT Kharagpur</p>
+					<p>I successfully completed the NPTEL Cloud Computing course offered by IIT Kharagpur through
+						Swayam, funded by the Government of India. This was a 12-week online course (Jul–Oct 2024), and
+						I earned an Elite Certificate with a consolidated score of 78%. I scored 25/25 in online
+						assignments and 53.39/75 in the proctored exam. The course helped me gain strong knowledge of
+						cloud computing concepts, services, and applications. It was a great learning experience, and I
+						am proud to be among the 30,816 students certified. This certification strengthens my technical
+						skills and adds value to my career in the IT field.
+					</p>
+				</div>
 			</div>
-		</div>
 		</div>
 		<div id="certModal2" class="modal">
-		<a href="#" class="close">&times;</a>
-		<div class="modal-content">
-			<img src="fd.jpg" alt="Certificate Zoom">
-			<div class="details">
-			<h2>Front-end Developer</h2>
-			<p>Issued by Study Comrade</p>
+			<a href="#" class="close">&times;</a>
+			<div class="modal-content">
+				<img src="fd.jpg" alt="Certificate Zoom">
+				<div class="details">
+					<h2>Front-end Developer</h2>
+					<p>Issued by Study Comrade</p>
+					<p>I successfully completed a 1-month live course on Frontend Development offered by Study Comrade
+						from November 21, 2022, to December 21, 2022. This certificate was awarded to me on February 20,
+						2022, for my active participation and performance. The course helped me learn important frontend
+						skills like HTML, CSS, and JavaScript, and how to build user-friendly websites. I gained
+						practical knowledge by working on real-time tasks during the training. This experience improved
+						my confidence and gave me a strong foundation in web development. I'm proud of this achievement,
+						and it adds value to my technical journey in the IT field.</p>
+				</div>
 			</div>
-		</div>
 		</div>
 		<div id="certModal3" class="modal">
-		<a href="#" class="close">&times;</a>
-		<div class="modal-content">
-			<img src="fsd.jpg" alt="Certificate Zoom">
-			<div class="details">
-			<h2>Full Stack Development</h2>
-			<p>Issued by BlackBuck Engineers</p>
+			<a href="#" class="close">&times;</a>
+			<div class="modal-content">
+				<img src="fsd.jpg" alt="Certificate Zoom">
+				<div class="details">
+					<h2>Full Stack Development</h2>
+					<p>Issued by BlackBuck Engineers</p>
+					<p>I successfully completed an 8-week internship in Full Stack Development conducted by the
+						International Institute of Digital Technologies, Tirupati, in collaboration with Blackbuck
+						Engineers and the Andhra Pradesh State Council of Higher Education (APSCHE). The internship
+						provided hands-on training in both frontend and backend development, helping me understand how
+						to build complete web applications. It was a great opportunity to learn real-world coding
+						practices, tools, and teamwork. My performance during the internship was rated as “Good”. This
+						experience has greatly improved my technical skills and knowledge, making me more confident and
+						better prepared for a career in software development.</p>
+				</div>
 			</div>
-		</div>
 		</div>
 		<div id="certModal4" class="modal">
-		<a href="#" class="close">&times;</a>
-		<div class="modal-content">
-			<img src="genz.jpg" alt="Certificate Zoom">
-			<div class="details">
-			<h2>Web Development</h2>
-			<p>Issued by Genz Educate Wings</p>
+			<a href="#" class="close">&times;</a>
+			<div class="modal-content">
+				<img src="genz.jpg" alt="Certificate Zoom">
+				<div class="details">
+					<h2>Web Development</h2>
+					<p>Issued by Genz Educate Wings</p>
+					<p>I successfully completed a Web Development Training from 10th February 2024 to 10th April 2024,
+						organized by GenZ EducateWing. The training covered important web technologies like HTML, CSS,
+						JavaScript, and Bootstrap. During the course, I stayed focused and dedicated to improving my
+						skills. I learned how to create responsive and user-friendly websites. This training helped me
+						understand the basics of frontend web development and how to apply them in real projects. I
+						received this certificate on 01st June 2024 in recognition of my performance and learning
+						efforts. It was a valuable experience that helped me grow as a developer.</p>
+				</div>
 			</div>
-		</div>
 		</div>
 		<div id="certModal5" class="modal">
-		<a href="#" class="close">&times;</a>
-		<div class="modal-content">
-			<img src="nipam.jpg" alt="Certificate Zoom">
-			<div class="details">
-			<h2>NIPAM</h2>
-			<p>Issued by Intellectual Property India</p>
+			<a href="#" class="close">&times;</a>
+			<div class="modal-content">
+				<img src="nipam.jpg" alt="Certificate Zoom">
+				<div class="details">
+					<h2>NIPAM</h2>
+					<p>Issued by Intellectual Property India</p>
+					<p>I successfully participated in the Intellectual Property (IP) Awareness Training Program under
+						the National Intellectual Property Awareness Mission (NIPAM) on March 22, 2024. The session was
+						organized by the Intellectual Property Office, India, and focused on increasing knowledge about
+						patents, trademarks, copyrights, and designs. It was a valuable learning experience that helped
+						me understand the importance of protecting creative and innovative ideas. I received the
+						certificate on April 1, 2024, as a recognition of my participation. This awareness program has
+						improved my understanding of intellectual property rights and their role in promoting innovation
+						and supporting career growth in technical fields.</p>
+				</div>
 			</div>
-		</div>
 		</div>
 		<div id="certModal6" class="modal">
-		<a href="#" class="close">&times;</a>
-		<div class="modal-content">
-			<img src="r programming.jpg" alt="Certificate Zoom">
-			<div class="details">
-			<h2>R-Programming</h2>
-			<p>Issued by MTIEAT</p>
+			<a href="#" class="close">&times;</a>
+			<div class="modal-content">
+				<img src="r programming.jpg" alt="Certificate Zoom">
+				<div class="details">
+					<h2>R-Programming</h2>
+					<p>Issued by MTIEAT</p>
+					<p>I participated in a one-day workshop on R Programming held on 15th April 2023 at Mother Theresa
+						Institute of Engineering and Technology (MTIET), Palamaner, organized by the Department of
+						Computer Science and Engineering. This workshop helped me understand the basics of R
+						programming, including how to work with data and perform simple analysis. It was a valuable
+						learning experience that improved my knowledge in data science and programming. I am thankful to
+						the department for organizing such a useful event. This participation has added to my technical
+						skills and boosted my interest in learning more about programming and data handling.</p>
+				</div>
 			</div>
 		</div>
-		</div>
 	</section>
-	
+
 	<style>
-	.modal {
-		display: none;
-		position: fixed;
-		z-index: 999;
-		top: 0;
-		left: 0;
-		width: 100vw;
-		height: 100vh;
-		background: rgba(0, 0, 0, 0.9);
-		justify-content: center;
-		align-items: center;
-		padding: 20px;
-		/* overflow-y: auto; */
-		box-sizing: border-box;
-	}
-	
-	.modal:target {
-		display: flex;
-	}
-	
-	.modal-content {
-	background: black;
-	border-radius: 12px;
-	max-width: 90%;
-	width: 100%;
-	max-height: 90vh;
-	overflow: auto;
-	padding: 20px;
-	box-shadow: 0 0 40px red;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-		}
-	
-	
-		.modal-content img {
-	width: auto;
-	max-width: 100%;
-	height: auto;
-	max-height: 70vh;
-	border-radius: 12px;
-	margin: 0 auto;
+		.modal {
+			display: none;
+			position: fixed;
+			z-index: 999;
+			top: 0;
+			left: 0;
+			width: 100vw;
+			height: 100vh;
+			background: rgba(0, 0, 0, 0.9);
+			justify-content: center;
+			align-items: center;
+			padding: 20px;
+			/* overflow-y: auto; */
+			box-sizing: border-box;
 		}
 
-	.details {
-		padding-top: 15px;
-		text-align: center;
-	}
-	
-	.details h2,
-	.details p {
-		color: rgb(255, 255, 255);
-	}
-	
-	.close {
-		position: absolute;
-		top: 20px;
-		right: 30px;
-		font-size: 30px;
-		color: white;
-		text-decoration: none;
-		font-weight: bold;
-	}
-	
+		.modal:target {
+			display: flex;
+		}
+
+		.modal-content {
+			background: black;
+			border-radius: 12px;
+			max-width: 90%;
+			width: 100%;
+			max-height: 90vh;
+			overflow: auto;
+			padding: 20px;
+			box-shadow: 0 0 40px red;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+		}
+
+
+		.modal-content img {
+			width: auto;
+			max-width: 100%;
+			height: auto;
+			max-height: 70vh;
+			border-radius: 12px;
+			margin: 0 auto;
+		}
+
+		.details {
+			padding-top: 15px;
+			text-align: center;
+		}
+
+		.details h2,
+		.details p {
+			color: rgb(255, 255, 255);
+		}
+
+		.close {
+			position: absolute;
+			top: 20px;
+			right: 30px;
+			font-size: 30px;
+			color: white;
+			text-decoration: none;
+			font-weight: bold;
+		}
 	</style>
-<!-- Project Details -->
+	<!-- Project Details -->
 
 	<section class="certificates" id="Project">
 		<div class="services-heading">
@@ -1019,38 +1090,207 @@
 		</div>
 		<div class="certificate-cards">
 			<div class="certificate-card">
-				
-				<h3>NPTEL Certificate</h3>
-				<p>Issued by IIT Kharagpur</p>
+				<a href="#projectModal1" ; style="text-decoration: none;">
+					<h3>ONLINE CRT</h3>
+					<p>Click To Expand</p>
+				</a>
 			</div>
 			<div class="certificate-card">
-				
-				<h3>front-end Developer</h3>
-				<p>Issued by Study Comrade</p>
+				<a href="#projectModal2" ; style="text-decoration: none;">
+					<h3>Soil Contamination</h3>
+					<p>Click To Expand</p>
+				</a>
 			</div>
 			<div class="certificate-card">
-				
-				<h3>Full Stack development</h3>
-				<p>Issued by BlackBuck Engineers</p>
+				<a href="#projectModal3" ; style="text-decoration: none;">
+					<h3>AIOP</h3>
+					<p>Click To Expand</p>
+				</a>
 			</div>
 			<div class="certificate-card">
-				
-				<h3>Web Development</h3>
-				<p>Issued by Genz Educate Wings</p>
+				<a href="#projectModal4" ; style="text-decoration: none;">
+					<h3>Real Estate Listings</h3>
+					<p>Click To Expand</p>
+				</a>
 			</div>
 			<div class="certificate-card">
-				
-				<h3>NIPAM</h3>
-				<p>Issued by Intellectual Property India</p>
+				<a href="#projectModal5" ; style="text-decoration: none;">
+					<h3>Traffic Sigh Detection and Voice Alert Using Neural Networks</h3>
+					<p>Click To Expand</p>
+				</a>
 			</div>
 			<div class="certificate-card">
-				
-				<h3>R-Programming</h3>
-				<p>Issued by MTIEAT</p>
+
+				<h3>....</h3>
+				<p>............</p>
 			</div>
 		</div>
 	</section>
+	<!-- Modals for zoom effect -->
+	<div id="projectModal1" class="modal">
+		<a href="#" class="close">&times;</a>
+		<div class="modal-content">
+			<div class="details">
+				<h2 style="margin-top: 10%;">Online Campus Recruitment Training</h2>
+				<p>This mini project helps students get ready for campus job placements by spreading awareness about
+					Online Campus Recruitment Training (CRT). It provides useful materials like practice tests, video
+					lessons, resume tips, and interview guidance. The goal is to improve skills in aptitude,
+					communication, and technical subjects. Students can learn at their own speed and feel more confident
+					during placements. This project is very helpful for those who may not have access to regular
+					training. It makes job preparation easier and increases the chances of getting selected. Overall, it
+					supports students in building a better future through proper placement training.
+				</p>
+				<h2>Certificate</h2>
+				<img src="online crt.png" alt="Certificate Zoom">
+			</div>
+		</div>
+	</div>
+	<div id="projectModal2" class="modal">
+		<a href="#" class="close">&times;</a>
+		<div class="modal-content">
+			<!-- <img src="fd.jpg" alt="Certificate Zoom"> -->
+			<div class="details">
+				<h2>Soil Contamination</h2>
+				<p>This mini project aims to raise awareness about soil contamination and its harmful effects on the
+					environment and human health. It explains how harmful chemicals from industries, waste, and
+					pesticides pollute the soil, making it unsafe for farming and living. The project highlights the
+					need to protect soil through proper waste management, reducing chemical use, and promoting organic
+					farming. By sharing simple solutions and encouraging eco-friendly habits, the project helps people
+					understand their role in keeping the soil clean. It supports a healthier environment and promotes
+					sustainable practices for the well-being of current and future generations.
+				</p>
+			</div>
+		</div>
+	</div>
+	<div id="projectModal3" class="modal">
+		<a href="#" class="close">&times;</a>
+		<div class="modal-content">
+			<!-- <img src="fsd.jpg" alt="Certificate Zoom"> -->
+			<div class="details">
+				<h2>AIOP</h2>
+				<p>The mini project **"All in One Popular"** is my own unique project idea, created to showcase the most
+					popular things in the world in one place. It brings together trending topics like famous movies,
+					popular celebrities, top tourist destinations, best-selling products, viral videos, and more. The
+					main aim is to help users easily explore and stay updated with what’s trending globally. This
+					project is designed to be informative, engaging, and simple to use. By collecting popular content
+					from different fields, it offers a one-stop platform for discovering the world’s most talked-about
+					and loved things in an interesting way.
+				</p>
+			</div>
+		</div>
+	</div>
+	<div id="projectModal4" class="modal">
+		<a href="#" class="close">&times;</a>
+		<div class="modal-content">
+			<!-- <img src="genz.jpg" alt="Certificate Zoom"> -->
+			<div class="details">
+				<h2>Real Estate Listings </h2>
+				<p>The **Real Estate Listings** mini project is designed to help people easily find property details in
+					one place. It shows listings of houses, apartments, and land available for sale or rent. Users can
+					view property photos, prices, locations, and important features like the number of rooms or nearby
+					facilities. The main aim is to make the property search simple and quick. This project helps buyers,
+					sellers, and renters connect easily. It is useful for anyone looking for a new home or investment.
+					Overall, it makes real estate information easy to access and helps people make better property
+					decisions.
+				</p>
+			</div>
+		</div>
+	</div>
+	<div id="projectModal5" class="modal">
+		<a href="#" class="close">&times;</a>
+		<div class="modal-content">
+			<!-- <img src="nipam.jpg" alt="Certificate Zoom"> -->
+			<div class="details">
+				<h2>Traffic Sigh Detection and Voice Alert Using Neural Networks</h2>
+				<p>The Traffic Sign Detection and Voice Alert Using Neural Networks** mini project helps in recognizing
+					road signs and giving voice alerts to drivers. It uses a camera to capture traffic signs and a
+					neural network model to identify them correctly. When a sign is detected, the system gives a voice
+					warning, helping drivers stay alert and follow traffic rules. This project improves road safety by
+					reducing accidents caused by missed signs. It is especially helpful for new drivers or in poor
+					visibility. Overall, it makes driving safer and smarter by using technology to understand and
+					respond to traffic signs in real time.
+				</p>
+			</div>
+		</div>
+	</div>
+	<div id="projectModal6" class="modal">
+		<a href="#" class="close">&times;</a>
+		<div class="modal-content">
+			<!-- <img src="r programming.jpg" alt="Certificate Zoom"> -->
+			<div class="details">
+				<h2>....</h2>
+				<p>.....</p>
+			</div>
+		</div>
+	</div>
+	</section>
 
+	<style>
+		.modal {
+			display: none;
+			position: fixed;
+			z-index: 999;
+			top: 0;
+			left: 0;
+			width: 100vw;
+			height: 100vh;
+			background: rgba(0, 0, 0, 0.9);
+			justify-content: center;
+			align-items: center;
+			padding: 20px;
+			/* overflow-y: auto; */
+			box-sizing: border-box;
+		}
+
+		.modal:target {
+			display: flex;
+		}
+
+		.modal-content {
+			background: black;
+			border-radius: 12px;
+			max-width: 90%;
+			width: 100%;
+			max-height: 90vh;
+			overflow: auto;
+			padding: 20px;
+			box-shadow: 0 0 40px red;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+		}
+
+
+		.modal-content img {
+			width: auto;
+			max-width: 100%;
+			height: auto;
+			max-height: 70vh;
+			border-radius: 12px;
+			margin: 0 auto;
+		}
+
+		.details {
+			padding-top: 15px;
+			text-align: center;
+		}
+
+		.details h2,
+		.details p {
+			color: rgb(255, 255, 255);
+		}
+
+		.close {
+			position: absolute;
+			top: 20px;
+			right: 30px;
+			font-size: 30px;
+			color: white;
+			text-decoration: none;
+			font-weight: bold;
+		}
+	</style>
 
 
 	<!-- Contact me section -->
